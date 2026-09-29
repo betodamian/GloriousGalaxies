@@ -18,6 +18,12 @@ public class ModItems {
     public static final DeferredItem<Item> BAUXITE = ITEMS.registerSimpleItem("bauxite");
 
     /**
+     * Aluminum: metal obtained by smelting bauxite in a furnace or blast furnace
+     * (see the recipes in data/gg/recipe). Registry id: gg:aluminum
+     */
+    public static final DeferredItem<Item> ALUMINUM = ITEMS.registerSimpleItem("aluminum");
+
+    /**
      * Hooks the item registry into the mod event bus.
      *
      * @param modEventBus the mod's event bus, provided by NeoForge on startup

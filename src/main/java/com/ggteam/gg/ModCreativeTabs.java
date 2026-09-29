@@ -26,6 +26,7 @@ public class ModCreativeTabs {
                     .displayItems((parameters, output) -> {
                         // Every item of the mod that should show up in our tab goes here.
                         output.accept(ModItems.BAUXITE.get());
+                        output.accept(ModItems.ALUMINUM.get());
                     })
                     .build());
 
@@ -48,6 +49,7 @@ public class ModCreativeTabs {
     private static void addToVanillaTabs(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.BAUXITE.get());
+            event.accept(ModItems.ALUMINUM.get());
         }
     }
 }
