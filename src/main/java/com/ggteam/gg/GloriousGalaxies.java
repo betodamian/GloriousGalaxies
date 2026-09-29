@@ -25,6 +25,8 @@ public class GloriousGalaxies {
      * @param modContainer container holding this mod's info and config registration
      */
     public GloriousGalaxies(IEventBus modEventBus, ModContainer modContainer) {
+        ModItems.register(modEventBus);
+        ModCreativeTabs.register(modEventBus);
         LOGGER.info("Glorious Galaxies loaded");
     }
 }
