@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#gg:has_bauxite_ore",
+  "features": [
+    "gg:ore_bauxite",
+    "gg:ore_bauxite_small"
+  ],
+  "step": "underground_ores"
+}

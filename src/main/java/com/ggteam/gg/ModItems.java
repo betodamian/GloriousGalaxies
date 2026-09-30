@@ -9,12 +9,13 @@ import net.neoforged.neoforge.registries.DeferredRegister;
  * Registry of every item added by Glorious Galaxies.
  * To add a new item: declare it below, add a model json, a texture,
  * and a lang entry, then list it in the creative tabs it belongs to.
+ * (Block items, like the ore blocks' items, are created in {@link ModBlocks}.)
  */
 public class ModItems {
     /** Holds all of this mod's items. Registered to the game in {@link #register}. */
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(GloriousGalaxies.MOD_ID);
 
-    /** Bauxite: raw aluminum ore item. Registry id: gg:bauxite */
+    /** Bauxite: raw aluminum ore item, dropped by bauxite ore. Registry id: gg:bauxite */
     public static final DeferredItem<Item> BAUXITE = ITEMS.registerSimpleItem("bauxite");
 
     /**

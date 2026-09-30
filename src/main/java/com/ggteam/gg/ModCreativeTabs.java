@@ -24,7 +24,9 @@ public class ModCreativeTabs {
                     .title(Component.translatable("itemGroup.gg.glorious_galaxies"))
                     .icon(() -> ModItems.BAUXITE.get().getDefaultInstance())
                     .displayItems((parameters, output) -> {
-                        // Every item of the mod that should show up in our tab goes here.
+                        // Every item and block of the mod that should show up in our tab goes here.
+                        output.accept(ModBlocks.BAUXITE_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_BAUXITE_ORE.get());
                         output.accept(ModItems.BAUXITE.get());
                         output.accept(ModItems.ALUMINUM.get());
                     })
@@ -42,7 +44,8 @@ public class ModCreativeTabs {
 
     /**
      * Adds our items to vanilla creative tabs.
-     * Vanilla has no "Minerals" tab, so mineral items go in "Ingredients" (coal, iron ingot, etc.).
+     * Vanilla has no "Minerals" tab, so mineral items go in "Ingredients" (coal, iron ingot, etc.),
+     * and ore blocks go in "Natural Blocks" next to the vanilla ores.
      *
      * @param event fired once per tab while the game builds the tab contents
      */
@@ -50,6 +53,10 @@ public class ModCreativeTabs {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.BAUXITE.get());
             event.accept(ModItems.ALUMINUM.get());
+        }
+        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.BAUXITE_ORE.get());
+            event.accept(ModBlocks.DEEPSLATE_BAUXITE_ORE.get());
         }
     }
 }
