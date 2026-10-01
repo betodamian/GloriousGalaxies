@@ -1,6 +1,8 @@
 {
   "values": [
     "gg:raw_bauxite_block",
-    "gg:aluminum_block"
+    "gg:aluminum_block",
+    "gg:titanium_block",
+    "gg:raw_titanium_block"
   ]
 }

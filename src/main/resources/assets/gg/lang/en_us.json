@@ -2,8 +2,14 @@
   "block.gg.aluminum_block": "Block of Aluminum",
   "block.gg.bauxite_ore": "Bauxite Ore",
   "block.gg.deepslate_bauxite_ore": "Deepslate Bauxite Ore",
+  "block.gg.deepslate_titanium_ore": "Deepslate Titanium Ore",
   "block.gg.raw_bauxite_block": "Block of Raw Bauxite",
-  "item.gg.aluminum": "Aluminum",
+  "block.gg.raw_titanium_block": "Block of Raw Titanium",
+  "block.gg.titanium_block": "Block of Titanium",
+  "block.gg.titanium_ore": "Titanium Ore",
+  "item.gg.aluminum_ingot": "Aluminum Ingot",
   "item.gg.bauxite": "Bauxite",
+  "item.gg.raw_titanium": "Raw Titanium",
+  "item.gg.titanium_ingot": "Titanium Ingot",
   "itemGroup.gg.glorious_galaxies": "Glorious Galaxies"
 }

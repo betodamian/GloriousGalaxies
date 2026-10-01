@@ -25,12 +25,20 @@ public class ModCreativeTabs {
                     .icon(() -> ModItems.BAUXITE.get().getDefaultInstance())
                     .displayItems((parameters, output) -> {
                         // Every item and block of the mod that should show up in our tab goes here.
+                        // Aluminum
                         output.accept(ModBlocks.BAUXITE_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_BAUXITE_ORE.get());
                         output.accept(ModBlocks.RAW_BAUXITE_BLOCK.get());
                         output.accept(ModItems.BAUXITE.get());
-                        output.accept(ModItems.ALUMINUM.get());
+                        output.accept(ModItems.ALUMINUM_INGOT.get());
                         output.accept(ModBlocks.ALUMINUM_BLOCK.get());
+                        // Titanium
+                        output.accept(ModBlocks.TITANIUM_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_TITANIUM_ORE.get());
+                        output.accept(ModBlocks.RAW_TITANIUM_BLOCK.get());
+                        output.accept(ModItems.RAW_TITANIUM.get());
+                        output.accept(ModItems.TITANIUM_INGOT.get());
+                        output.accept(ModBlocks.TITANIUM_BLOCK.get());
                     })
                     .build());
 
@@ -54,15 +62,21 @@ public class ModCreativeTabs {
     private static void addToVanillaTabs(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.BAUXITE.get());
-            event.accept(ModItems.ALUMINUM.get());
+            event.accept(ModItems.ALUMINUM_INGOT.get());
+            event.accept(ModItems.RAW_TITANIUM.get());
+            event.accept(ModItems.TITANIUM_INGOT.get());
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModBlocks.BAUXITE_ORE.get());
             event.accept(ModBlocks.DEEPSLATE_BAUXITE_ORE.get());
             event.accept(ModBlocks.RAW_BAUXITE_BLOCK.get());
+            event.accept(ModBlocks.TITANIUM_ORE.get());
+            event.accept(ModBlocks.DEEPSLATE_TITANIUM_ORE.get());
+            event.accept(ModBlocks.RAW_TITANIUM_BLOCK.get());
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.ALUMINUM_BLOCK.get());
+            event.accept(ModBlocks.TITANIUM_BLOCK.get());
         }
     }
 }

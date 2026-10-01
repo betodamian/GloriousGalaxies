@@ -58,16 +58,71 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(5.0F, 6.0F)));
 
+    /** Vanilla block of iron's hardness (mining time) and blast resistance, used as a base below. */
+    private static final float IRON_BLOCK_HARDNESS = 5.0F;
+    private static final float IRON_BLOCK_BLAST_RESISTANCE = 6.0F;
+
     /**
-     * Block of Aluminum: same properties as vanilla's block of iron. Crafted from 9 aluminum
-     * (and back). Registry id: gg:aluminum_block
+     * Block of Aluminum: like vanilla's block of iron, but with 2/3 of its hardness and blast
+     * resistance (aluminum is a softer metal). Still needs a stone pickaxe or better.
+     * Crafted from 9 aluminum ingots (and back). Registry id: gg:aluminum_block
      */
     public static final DeferredBlock<Block> ALUMINUM_BLOCK = registerBlockWithItem("aluminum_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.METAL)
                     .instrument(NoteBlockInstrument.IRON_XYLOPHONE)
                     .requiresCorrectToolForDrops()
-                    .strength(5.0F, 6.0F)
+                    .strength(IRON_BLOCK_HARDNESS * 2 / 3, IRON_BLOCK_BLAST_RESISTANCE * 2 / 3)
+                    .sound(SoundType.METAL)));
+
+    // ----- Titanium -----
+
+    /**
+     * Titanium Ore: as tough as vanilla diamond ore (hardness 3, needs an iron pickaxe or better).
+     * Drops raw titanium like iron ore drops raw iron, so it gives no experience itself
+     * (smelting the raw titanium does). Generates in every overworld biome, as rare as diamonds.
+     * Registry id: gg:titanium_ore
+     */
+    public static final DeferredBlock<DropExperienceBlock> TITANIUM_ORE = registerBlockWithItem("titanium_ore",
+            () -> new DropExperienceBlock(ConstantInt.of(0), BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F)));
+
+    /**
+     * Deepslate Titanium Ore: as tough as vanilla deepslate diamond ore. Registry id: gg:deepslate_titanium_ore
+     */
+    public static final DeferredBlock<DropExperienceBlock> DEEPSLATE_TITANIUM_ORE = registerBlockWithItem("deepslate_titanium_ore",
+            () -> new DropExperienceBlock(ConstantInt.of(0), BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.DEEPSLATE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(4.5F, 3.0F)
+                    .sound(SoundType.DEEPSLATE)));
+
+    /**
+     * Block of Raw Titanium: like vanilla's block of raw iron, but needs an iron pickaxe (like the ore).
+     * Crafted from 9 raw titanium (and back). Registry id: gg:raw_titanium_block
+     */
+    public static final DeferredBlock<Block> RAW_TITANIUM_BLOCK = registerBlockWithItem("raw_titanium_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F)));
+
+    /**
+     * Block of Titanium: takes a bit longer to mine than a block of diamond (hardness 6 vs 5),
+     * same blast resistance, needs an iron pickaxe or better.
+     * Crafted from 9 titanium ingots (and back). Registry id: gg:titanium_block
+     */
+    public static final DeferredBlock<Block> TITANIUM_BLOCK = registerBlockWithItem("titanium_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
+                    .instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(6.0F, 6.0F)
                     .sound(SoundType.METAL)));
 
     /**

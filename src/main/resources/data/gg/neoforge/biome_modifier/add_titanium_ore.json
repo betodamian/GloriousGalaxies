@@ -1,0 +1,11 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "gg:ore_titanium",
+    "gg:ore_titanium_large",
+    "gg:ore_titanium_buried",
+    "gg:ore_titanium_medium"
+  ],
+  "step": "underground_ores"
+}

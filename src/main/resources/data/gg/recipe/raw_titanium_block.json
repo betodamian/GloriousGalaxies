@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "gg:aluminum_ingot"
+      "item": "gg:raw_titanium"
     }
   },
   "pattern": [
@@ -13,6 +13,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "gg:aluminum_block"
+    "id": "gg:raw_titanium_block"
   }
 }

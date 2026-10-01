@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "category": "misc",
-  "group": "aluminum",
-  "ingredient": { "tag": "gg:bauxite_ores" },
-  "result": { "id": "gg:aluminum" },
-  "experience": 0.7,
-  "cookingtime": 100
-}
