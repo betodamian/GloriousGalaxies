@@ -27,8 +27,10 @@ public class ModCreativeTabs {
                         // Every item and block of the mod that should show up in our tab goes here.
                         output.accept(ModBlocks.BAUXITE_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_BAUXITE_ORE.get());
+                        output.accept(ModBlocks.RAW_BAUXITE_BLOCK.get());
                         output.accept(ModItems.BAUXITE.get());
                         output.accept(ModItems.ALUMINUM.get());
+                        output.accept(ModBlocks.ALUMINUM_BLOCK.get());
                     })
                     .build());
 
@@ -44,8 +46,8 @@ public class ModCreativeTabs {
 
     /**
      * Adds our items to vanilla creative tabs.
-     * Vanilla has no "Minerals" tab, so mineral items go in "Ingredients" (coal, iron ingot, etc.),
-     * and ore blocks go in "Natural Blocks" next to the vanilla ores.
+     * Vanilla has no "Minerals" tab, so mineral items go in "Ingredients" (coal, iron ingot, etc.).
+     * Like vanilla: ores and raw ore blocks go in "Natural Blocks", metal blocks in "Building Blocks".
      *
      * @param event fired once per tab while the game builds the tab contents
      */
@@ -57,6 +59,10 @@ public class ModCreativeTabs {
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModBlocks.BAUXITE_ORE.get());
             event.accept(ModBlocks.DEEPSLATE_BAUXITE_ORE.get());
+            event.accept(ModBlocks.RAW_BAUXITE_BLOCK.get());
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.ALUMINUM_BLOCK.get());
         }
     }
 }

@@ -3,7 +3,8 @@
   "biomes": "#gg:has_bauxite_ore",
   "features": [
     "gg:ore_bauxite",
-    "gg:ore_bauxite_small"
+    "gg:ore_bauxite_small",
+    "gg:bauxite_vein"
   ],
   "step": "underground_ores"
 }

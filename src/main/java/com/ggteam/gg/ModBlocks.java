@@ -48,6 +48,29 @@ public class ModBlocks {
                     .sound(SoundType.DEEPSLATE)));
 
     /**
+     * Block of Raw Bauxite: same properties as vanilla's block of raw iron. Crafted from 9 bauxite
+     * (and back), and found now and then inside bauxite veins. Registry id: gg:raw_bauxite_block
+     */
+    public static final DeferredBlock<Block> RAW_BAUXITE_BLOCK = registerBlockWithItem("raw_bauxite_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_ORANGE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F)));
+
+    /**
+     * Block of Aluminum: same properties as vanilla's block of iron. Crafted from 9 aluminum
+     * (and back). Registry id: gg:aluminum_block
+     */
+    public static final DeferredBlock<Block> ALUMINUM_BLOCK = registerBlockWithItem("aluminum_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
+                    .instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F)
+                    .sound(SoundType.METAL)));
+
+    /**
      * Registers a block together with the item that places it (so it can be held and put in the inventory).
      *
      * @param name          registry name, e.g. "bauxite_ore"

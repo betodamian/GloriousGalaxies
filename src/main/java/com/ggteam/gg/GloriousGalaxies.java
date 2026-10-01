@@ -1,5 +1,6 @@
 package com.ggteam.gg;
 
+import com.ggteam.gg.worldgen.ModFeatures;
 import com.mojang.logging.LogUtils;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -28,6 +29,7 @@ public class GloriousGalaxies {
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
+        ModFeatures.register(modEventBus);
         LOGGER.info("Glorious Galaxies loaded");
     }
 }

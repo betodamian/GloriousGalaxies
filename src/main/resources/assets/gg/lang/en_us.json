@@ -1,6 +1,8 @@
 {
+  "block.gg.aluminum_block": "Block of Aluminum",
   "block.gg.bauxite_ore": "Bauxite Ore",
   "block.gg.deepslate_bauxite_ore": "Deepslate Bauxite Ore",
+  "block.gg.raw_bauxite_block": "Block of Raw Bauxite",
   "item.gg.aluminum": "Aluminum",
   "item.gg.bauxite": "Bauxite",
   "itemGroup.gg.glorious_galaxies": "Glorious Galaxies"

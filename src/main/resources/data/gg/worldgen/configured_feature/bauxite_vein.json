@@ -1,0 +1,23 @@
+{
+  "type": "gg:ore_vein",
+  "config": {
+    "stone_ore": {
+      "Name": "gg:bauxite_ore"
+    },
+    "deepslate_ore": {
+      "Name": "gg:deepslate_bauxite_ore"
+    },
+    "raw_ore_block": {
+      "Name": "gg:raw_bauxite_block"
+    },
+    "filler": {
+      "Name": "minecraft:tuff"
+    },
+    "length": 48,
+    "min_radius": 1.5,
+    "max_radius": 3.0,
+    "solidness": 0.7,
+    "ore_chance": 0.2,
+    "raw_ore_block_chance": 0.02
+  }
+}
